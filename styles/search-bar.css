@@ -51,5 +51,5 @@
     padding: 1em;
     background-color: #f3f3f3;
     border-radius: 0.2em;
-    border: 1px #2f005f solid;
+    border: 1px var(---primary-dark) solid;
 }

@@ -9,9 +9,9 @@ header {
     width: 100%;
     height: 100px;
     padding: 0 25px;
-    border-bottom: 1px solid #2f005f;
+    border-bottom: 1px solid var(---primary-dark);
     color: aliceblue;
-    background-image: linear-gradient(#370f5f, #a041ff);
+    background-image: linear-gradient(var(---primary-dark), var(---primary-light));
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,9 +55,9 @@ main
 }
 
 footer {
-    border-top: 1px solid #2f005f;
+    border-top: 1px solid var(---primary-dark);
     color: aliceblue;
-    background-image: linear-gradient(#652c9f, #370f5f);
+    background-image: linear-gradient(var(---primary-light), var(---primary-dark));
     padding: 30px;
     text-align: center;
 }

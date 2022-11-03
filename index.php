@@ -111,7 +111,6 @@
 
             $item_model = <<< HEREDOC
                 <div class="item-holder">
-            <a class="link-book" href="./details?id=%s" target="_blank">
                     <div style="display: flex; justify-content: center;">
                         <img src="imgs/%s.webp" class="item-img">
                     </div>
@@ -122,7 +121,9 @@
                     <div class="item-rcm" style="visibility:%s;">
                         <p>Recomendado</p>
                     </div>
-            </a>
+                    <a class="link-details" href="./details?id=%s" target="_blank">
+                    <p>Detalhes...</p>
+                </a>
                 </div>
 HEREDOC;
 
@@ -140,12 +141,12 @@ HEREDOC;
                 printf(
                     $item_model,
                     $item['cod'],
-                    $item['cod'],
                     $item['tit'],
                     $aval . "&nbsp;" . $item['aval'],
                     $item['parc'],
                     $item['preco'],
-                    $rec
+                    $rec,
+                    $item['cod']
                 );
             }
             ?>
