@@ -11,8 +11,6 @@
     <?php include_once('../header.php'); ?>
     <main>
         
-    <?= relativePath($_SERVER['PHP_SELF'], "/Marcelo/site-livraria---web-dev/") ?>
-        <!-- <?= $_SERVER['PHP_SELF'] ?> -->
     </main>
     <?php include_once('../footer.php'); ?>
 </body>

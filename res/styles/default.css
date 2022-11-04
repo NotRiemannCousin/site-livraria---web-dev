@@ -24,10 +24,15 @@ header > div
     justify-content: space-between;
 }
 
+header>div>svg{
+    height: 80px;
+}
+
 #header-links
 {
     display: flex;
     width: 20%;
+    align-items: center;
     justify-content: space-between;
 }
 
