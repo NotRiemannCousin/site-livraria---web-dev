@@ -10,7 +10,7 @@
     <title>Livraria</title>
 </head>
 <body>
-<?php include_once('header.html'); ?>
+<?php include_once('header.php'); ?>
     <main>
         <div id="searcher">
             <h1>6 produtos </h1>
@@ -152,7 +152,7 @@ HEREDOC;
             ?>
         </div>
     </main>
-    <?php include_once('footer.html'); ?>
+    <?php include_once('footer.php'); ?>
 </body>
 
 </html>
