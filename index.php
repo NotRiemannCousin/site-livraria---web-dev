@@ -45,7 +45,6 @@
         <div id="holder-all-items">
             <?php
             require_once('class/fakedb.class.php');
-            $fakedb = new fakeDB();
             function clamp($current, $min, $max)
             {
                 return max($min, min($max, $current));
@@ -68,7 +67,7 @@
                 </div>
 HEREDOC;
 
-            foreach ($fakedb->recoverAllBook() as $book) {
+            foreach (FakeDB::recoverAllBook() as $book) {
 
                 $aval = '';
                 for ($i = 0; $i < 5; $i++) {
@@ -83,8 +82,8 @@ HEREDOC;
                     $book_model,
                     $book->code,
                     $book->title,
-                    $aval . '&nbsp;' . round($book->calculateAverageRating(), 1),
-                    round($book->price, 2) . 'R$',
+                    $aval . '&nbsp;' . number_format((float)$book->calculateAverageRating(), 1, '.', ''),
+                    number_format((float)$book->price, 2, '.', '') . 'R$',
                     $rec,
                     $book->code
                 );

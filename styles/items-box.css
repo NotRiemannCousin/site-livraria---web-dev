@@ -2,6 +2,7 @@
     font-family: 'Roboto', sans-serif;
     display: grid;
     grid-auto-flow: row;
+    grid-gap: 10px;
     grid-template-columns: repeat(3, 33%);
     min-height: 90vh;
     flex-wrap: wrap;

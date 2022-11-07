@@ -1,11 +1,9 @@
 <?php
 
     require_once('./class/book.class.php');
-    class fakeDB
+    class FakeDB
     {
-        public $inBook;
-
-        public function recoverAllBook()
+        public static function recoverAllBook()
         {
 
             // region Object Author
@@ -230,7 +228,7 @@
             ]);
             // endregion
 
-            $this->inBook = [
+            return [
                 $bookA->code => $bookA,
                 $bookB->code => $bookB,
                 $bookC->code => $bookC,
@@ -244,12 +242,10 @@
                 $bookK->code => $bookK,
                 $bookL->code => $bookL,
             ];
-            return $this->inBook;
         }
-        public function recoverBook($code)
+        public static function recoverBook($code)
         {
-            $inBook = $this->recoverAllBook();
-            return $inBook[$code];
+            return FakeDB::recoverAllBook()[$code];
         }
     }
 ?>
