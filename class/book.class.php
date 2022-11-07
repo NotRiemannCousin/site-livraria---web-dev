@@ -1,7 +1,7 @@
 <?php
 
-    require_once './class/author.class.php';
-    require_once './class/publisher.class.php';
+    require_once 'author.class.php';
+    require_once 'publisher.class.php';
     class Book 
     {
 

@@ -1,6 +1,6 @@
 <?php
 
-    require_once('./class/book.class.php');
+    require_once 'book.class.php';
     class FakeDB
     {
         public static function recoverAllBook()

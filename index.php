@@ -44,7 +44,7 @@
         </div>
         <div id="holder-all-items">
             <?php
-            require_once('class/fakedb.class.php');
+            require_once 'class/fakedb.class.php';
             function clamp($current, $min, $max)
             {
                 return max($min, min($max, $current));

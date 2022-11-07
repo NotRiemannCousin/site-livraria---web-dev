@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php
+include_once '../class/fakedb.class.php';
+$book = FakeDB::recoverBook($_GET['id']);
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title><?= $book->title ?></title>
     <link rel="stylesheet" href="details.css">
     <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-    <?php require_once('../class/fakedb.class.php'); ?>
-    <?= FakeDB::recoverBook($_GET['id']) ?>
-    <?php include_once('../header.php'); ?>
+    <?php include_once '../header.php'; ?>
     <main>
         <div>
             <div class="d1">
                 <div class="d2">
-                    <img src="../imgs\1000019985.webp">
+                    <?= '<img src="../imgs/' . $book->code . '.webp">'?>
                 </div>
                 <div class="d3">
 
