@@ -21,9 +21,9 @@
 
             $author5 = new Author();
             $author5->name = 'Melissa Tobias';
-            //endregion
+            // endregion
 
-            //region Object Publisher
+            // region Object Publisher
             $publisher1 = new Publisher();
             $publisher1->name = 'HarperCollins';
 
@@ -38,10 +38,10 @@
 
             $publisher5 = new Publisher();
             $publisher5->name = 'Novo Século';
-            //endregion
+            // endregion
 
 
-            //region Object Book
+            // region Object Book
 
             $bookA = new Book();
             $bookA->fillData([
@@ -129,7 +129,7 @@
                 [$author3, $author2],
                 $publisher4,
                 10,
-                978,
+                978, 
                 2006,
                 false,
                 40.0,
@@ -214,7 +214,7 @@
 
             $bookL = new Book();
             $bookL->fillData([
-                12,
+                11,
                 'Homo Deus',
                 'Neste Homo Deus: uma breve história do amanhã, Yuval Noah Harari, autor do estrondoso best-seller Sapiens: uma breve história da humanidade, volta a combinar ciência, história e filosofia, desta vez para entender quem somos e descobrir para onde vamos. Sempre com um olhar no passado e nas nossas origens, Harari investiga o futuro da humanidade em busca de uma resposta tão difícil quanto essencial: depois de séculos de guerras, fome e pobreza, qual será nosso destino na Terra?',
                 [$author3],
@@ -226,7 +226,7 @@
                 46.99,
                 [01,23,34, 56, 12]
             ]);
-            //endregion
+            // endregion
 
             return [
                 $bookA->code => $bookA,
