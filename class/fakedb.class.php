@@ -3,6 +3,8 @@
     require_once('./class/book.class.php');
     class fakeDB
     {
+        public $inBook;
+
         public function recoverAllBook()
         {
 
@@ -228,7 +230,7 @@
             ]);
             // endregion
 
-            return [
+            $this->inBook = [
                 $bookA->code => $bookA,
                 $bookB->code => $bookB,
                 $bookC->code => $bookC,
@@ -242,6 +244,7 @@
                 $bookK->code => $bookK,
                 $bookL->code => $bookL,
             ];
+            return $this->inBook;
         }
         public function recoverBook($code)
         {
