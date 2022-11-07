@@ -1,0 +1,51 @@
+main div {
+    border: 1px gray solid;
+    margin: 5px;
+}
+
+.d3 {
+
+    margin-left: 0px;
+
+}
+
+.d2 {
+    margin-right: 0px;
+
+}
+
+.d1 {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-gap: 20px;
+
+}
+
+.star-f, .star-e {
+    height: 1.5em;
+}
+.star-f{
+    position: absolute;
+}
+
+.avl {
+    background-color: gray;
+    border-radius: 10px;
+    width: 25%;
+    height: 25px;
+}
+
+.aval div
+{
+    background-color: gold;
+}
+
+.avalia {
+    display: flex;
+    align-items: center;
+}
+
+.prc {
+    margin: 0px;
+
+}
