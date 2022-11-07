@@ -20,7 +20,7 @@ $book = FakeDB::recoverBook($_GET['id']);
         <div>
             <div class="d1">
                 <div class="d2">
-                    <?= '<img src="../imgs/' . $book->code . '.webp">'?>
+                    <?= '<img src="../imgs/' . $book->code . '.webp">' ?>
                 </div>
                 <div class="d3">
 
@@ -47,58 +47,51 @@ $book = FakeDB::recoverBook($_GET['id']);
                     <h4>Avaliações</h4>
                     <div class="avalia">
 
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <div class="avl">dsfdf</div>
-                        <p class="prc">100%</p>
+
+                        <img class="star-e" src="../res/imgs/stars-empty.webp">
+                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
+                        <div class="avl">
+                            <div>&nbsp;</div>
+                        </div>
+                        <p class="prc"><?= $book->review[0] ?></p>
                     </div>
                     <div class="avalia">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <div class="avl">dsfdf</div>
-                        <p class="prc">100%</p>
+
+                        <img class="star-e" src="../res/imgs/stars-empty.webp">
+                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
+                        <div class="avl">
+                            <div>&nbsp;</div>
+                        </div>
+                        <p class="prc"><?= $book->review[1] ?></p>
                     </div>
                     <div class="avalia">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <div class="avl">dsfdf</div>
-                        <p class="prc">100%</p>
+
+                        <img class="star-e" src="../res/imgs/stars-empty.webp">
+                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
+                        <div class="avl">
+                            <div>&nbsp;</div>
+                        </div>
+                        <p class="prc"><?= $book->review[2] ?></p>
                     </div>
                     <div class="avalia">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <div class="avl">dsfdf</div>
-                        <p class="prc">100%</p>
+
+                        <img class="star-e" src="../res/imgs/stars-empty.webp">
+                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
+                        <div class="avl">
+                            <div>&nbsp;</div>
+                        </div>
+                        <p class="prc"><?= $book->review[3] ?></p>
                     </div>
                     <div class="avalia">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <div class="avl">dsfdf</div>
-                        <p class="prc">100%</p>
+
+                        <img class="star-e" src="../res/imgs/stars-empty.webp">
+                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
+                        <div class="avl">
+                            <div>&nbsp;</div>
+                        </div>
+                        <p class="prc"><?= $book->review[4] ?></p>
                     </div>
                     <div class="avalia">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <img class="estrela" src="../imgs\estrela.png">
-                        <div class="avl">dsfdf</div>
-                        <p class="prc">100%</p>
                     </div>
                     <a href="../">Voltar</a>
                 </div>
