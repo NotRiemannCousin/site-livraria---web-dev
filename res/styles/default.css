@@ -45,6 +45,7 @@ header>div>svg{
 #header-links a,
 #header-links a:active,
 #header-links a:visited {
+    margin: 0 5px;
     text-decoration: none;
     color: white;
     font-weight: 600;
