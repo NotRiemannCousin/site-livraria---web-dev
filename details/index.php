@@ -24,13 +24,13 @@ $book = FakeDB::recoverBook($_GET['id']);
                 </div>
                 <div class="mark info">
                     <head>
-                        <h3>20 mil leguas submarinas</h3>
+                        <h3><?= $book->title ?></h3>
                     </head>
-                    <p>Autores:Qualquer coisa</p><br>
-                    <p>Editora:Qualquer coisa</p><br>
-                    <p>Edição:Qualquer coisa</p><br>
-                    <p>Páginas:Qualquer coisa</p><br>
-                    <p>Ano de públicação:Qualquer coisa</p><br>
+                    <p>Autores: <?= implode(", ", $book->author) ?></p>
+                    <p>Editora: <?= $book->publisher ?></p>
+                    <p>Edição: <?= $book->edition ?></p>
+                    <p>Páginas <?= $book->pages ?></p>
+                    <p>Ano de públicação: <?= $book->year ?></p>
                 </div>
             </div>
             <div class="mark">
