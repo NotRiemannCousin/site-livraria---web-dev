@@ -1,3 +1,15 @@
+:root {
+    ---primary: #2e01ba;
+
+    ---primary-dark: #3d2291;
+    ---primary-dark-2: #20007c;
+    
+    ---primary-light: #5e3dcf;
+    ---primary-light-2: #dcc8fb;
+
+}
+
+/*
 :root{
     ---primary: #5d01ba;
 
@@ -8,3 +20,4 @@
     ---primary-light-2: #dcc8fb;
     
 }
+*/

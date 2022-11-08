@@ -1,51 +1,95 @@
-main div {
-    border: 1px gray solid;
+.mark .mark,
+.mark {
+    border: 1px rgb(110, 110, 110) solid;
     margin: 5px;
+    padding: 5px;
 }
 
-.d3 {
+.mark .mark {
+    padding: 15px;
+}
 
+.info {
     margin-left: 0px;
-
 }
 
-.d2 {
+.book-cover {
     margin-right: 0px;
-
+    display: flex;
 }
 
-.d1 {
-    display: grid;
+.book-cover img {
+    margin: auto;
+}
+
+.main-core {
     grid-template-columns: 1fr 6fr;
     grid-gap: 20px;
-
 }
 
-.star-f, .star-e {
-    height: 1.5em;
+.stars-full,
+.stars-empty {
+    height: 2.5em;
 }
-.star-f{
+
+.stars-empty {
     position: absolute;
 }
 
-.avl {
+.perc-avl {
     background-color: gray;
     border-radius: 10px;
-    width: 25%;
+    width: 100%;
     height: 25px;
+    border-width: 0;
+    overflow: hidden;
+    margin: 0 7px;
 }
 
-.aval div
-{
-    background-color: gold;
-}
-
-.avalia {
+.stars-holder {
+    flex-direction: column;
     display: flex;
+    padding: 5px;
     align-items: center;
 }
 
-.prc {
-    margin: 0px;
+.stars-holder p {
+    margin: 0;
+}
 
+.perc-avl div {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #f2ad18;
+    display: inline-block;
+}
+
+.back-btn{
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    margin: 0 0 15px 15px;
+    background-color: rgba(240, 248, 255, 0.169);
+    padding: 6px 8px;
+    border: 1px gray solid;
+    border-radius: 10px;
+}
+
+.back-btn:hover{
+    color: white;
+    background-color: var(---primary-light);
+}
+
+@media screen and (min-width: 560px) {
+    .main-core {
+        display: grid;
+    }
+
+    .perc-avl {
+        width: 25%;
+    }
+
+    .stars-holder {
+        flex-direction: row;
+    }
 }

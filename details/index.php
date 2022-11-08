@@ -18,84 +18,60 @@ $book = FakeDB::recoverBook($_GET['id']);
     <?php include_once '../header.php'; ?>
     <main>
         <div>
-            <div class="d1">
-                <div class="d2">
+            <div class="mark main-core">
+                <div class="mark book-cover">
                     <?= '<img src="../imgs/' . $book->code . '.webp">' ?>
                 </div>
-                <div class="d3">
-
+                <div class="mark info">
                     <head>
                         <h3>20 mil leguas submarinas</h3>
                     </head>
-                    <main>
-                        <p>Autores:Qualquer coisa</p><br>
-                        <p>Editora:Qualquer coisa</p><br>
-                        <p>Edição:Qualquer coisa</p><br>
-                        <p>Páginas:Qualquer coisa</p><br>
-                        <p>Ano de públicação:Qualquer coisa</p><br>
-                    </main>
+                    <p>Autores:Qualquer coisa</p><br>
+                    <p>Editora:Qualquer coisa</p><br>
+                    <p>Edição:Qualquer coisa</p><br>
+                    <p>Páginas:Qualquer coisa</p><br>
+                    <p>Ano de públicação:Qualquer coisa</p><br>
                 </div>
             </div>
-            <div>
+            <div class="mark">
 
 
-                <div>
+                <div class="mark">
                     <h4>Descrição</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate maiores quis, nostrum saepe dolorem reprehenderit veniam dolor. Amet magni praesentium dignissimos dolor consectetur tempore ipsa, inventore, quibusdam assumenda repellendus commodi.</p>
+                    <p><?= $book->description ?></p>
                 </div>
-                <div>
-                    <h4>Avaliações</h4>
-                    <div class="avalia">
-
-
-                        <img class="star-e" src="../res/imgs/stars-empty.webp">
-                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
-                        <div class="avl">
-                            <div>&nbsp;</div>
+                <div class="mark">
+                    <h4>avaliações</h4>
+                    <?php
+                    $aval_format = <<< HEREDOC
+                    <div class="stars-holder">
+                        <img class="stars-empty" src="../res/imgs/stars-empty.webp">
+                        <img class="stars-full" src="../res/imgs/stars-full.webp" style="clip-path:polygon(0 0,0 100%%, %d%% 100%%, %d%% 0)">
+                        
+                            
+                        <div class="perc-avl">
+                            <div style="width: %d%%"></div>
                         </div>
-                        <p class="prc"><?= $book->review[0] ?></p>
+                        <p class="prc">%d</p>
                     </div>
-                    <div class="avalia">
+HEREDOC;
+                    for ($i = 0; $i < 5; $i++) {
+                        printf(
+                            $aval_format,
+                            ($i + 1) * 20,
+                            ($i + 1) * 20,
+                            $book->calculatePercentReview($i) * 100,
+                            $book->calculatePercentReview($i) * 100
+                        );
+                    }
+                    ?>
 
-                        <img class="star-e" src="../res/imgs/stars-empty.webp">
-                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
-                        <div class="avl">
-                            <div>&nbsp;</div>
-                        </div>
-                        <p class="prc"><?= $book->review[1] ?></p>
-                    </div>
-                    <div class="avalia">
-
-                        <img class="star-e" src="../res/imgs/stars-empty.webp">
-                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
-                        <div class="avl">
-                            <div>&nbsp;</div>
-                        </div>
-                        <p class="prc"><?= $book->review[2] ?></p>
-                    </div>
-                    <div class="avalia">
-
-                        <img class="star-e" src="../res/imgs/stars-empty.webp">
-                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
-                        <div class="avl">
-                            <div>&nbsp;</div>
-                        </div>
-                        <p class="prc"><?= $book->review[3] ?></p>
-                    </div>
-                    <div class="avalia">
-
-                        <img class="star-e" src="../res/imgs/stars-empty.webp">
-                        <img class="star-f" src="../res/imgs/stars-full.webp" style="clip-path:rect(0 0,0 10%0 100%,, 0 100%x)">
-                        <div class="avl">
-                            <div>&nbsp;</div>
-                        </div>
-                        <p class="prc"><?= $book->review[4] ?></p>
-                    </div>
-                    <div class="avalia">
-                    </div>
-                    <a href="../">Voltar</a>
                 </div>
+                <div class="stars-holder">
+                </div>
+                <a class="back-btn" href="../">voltar</a>
             </div>
+        </div>
         </div>
     </main>
     <?php include_once('../footer.php'); ?>
