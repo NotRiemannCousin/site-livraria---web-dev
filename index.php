@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php include_once('header.php'); ?>
+    <?php include_once 'header.php'; ?>
     <main>
         <div id="searcher">
             <h1>6 produtos </h1>
@@ -56,7 +56,12 @@
                         <img src="imgs/%s.webp" class="item-img">
                     </div>
                     <p class="item-title">&nbsp;%s</p>
-                    <p class="item-aval">&nbsp;%s</p>
+           <div class="item-aval">
+	         <p>
+							<img class="item-stars-e" src="https://trab-1.fruitspunchsamu.repl.co/res/imgs/stars-empty.webp" style="clip-path: polygon(100%% 0, 100%% 100%%, %s%% 100%%, %s%% 0)"/>
+		  	   <img class="item-stars" src="https://trab-1.fruitspunchsamu.repl.co/res/imgs/stars-full.webp" title="%s" />
+							</p>
+					 </div>
                     <p class="item-price">&nbsp;%s&nbsp</p>
                     <div class="item-rcm" style="visibility:%s;">
                         <p>Lançamento!!</p>
@@ -70,11 +75,6 @@ HEREDOC;
             foreach (FakeDB::recoverAllBook() as $book) {
 
                 $aval = '';
-                for ($i = 0; $i < 5; $i++) {
-                    $aval .= '<img class="item-stars" src="res/imgs/estrela-' .
-                        floor(clamp($book->calculateAverageRating() - $i, 0, 1) * 4) * 25
-                        . '.webp">';
-                }
 
 
                 $rec = ($book->release == true ? 'visible' : 'hidden');
@@ -82,6 +82,8 @@ HEREDOC;
                     $book_model,
                     $book->code,
                     $book->title,
+									  $book->calculateAverageRating() * 20,
+								   	$book->calculateAverageRating() * 20,
                     $aval . '&nbsp;' . number_format((float)$book->calculateAverageRating(), 1, '.', ''),
                     number_format((float)$book->price, 2, '.', '') . 'R$',
                     $rec,

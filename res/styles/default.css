@@ -1,6 +1,11 @@
+html{
+	width: 100hv;
+}
+
 body {
     margin: 0;
     max-width: 100%;
+	  overflow-x: hidden;
 }
 
 header {
@@ -30,7 +35,7 @@ header>div>svg{
 
 #header-links
 {
-    display: flex;
+    display: none;
     width: 20%;
     align-items: center;
     justify-content: space-between;
@@ -66,3 +71,11 @@ footer {
     padding: 30px;
     text-align: center;
 }
+
+@media screen and (min-width: 400px)
+{
+  #header-links{
+	  display:flex;
+  }
+}
+

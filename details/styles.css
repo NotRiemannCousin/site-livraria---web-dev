@@ -1,30 +1,32 @@
+@import url('../styles.css');
 main div {
-    border: 1px gray solid;
+    border: 1px red solid;
     margin: 5px;
 }
 
-.d3 {
-
+.main-details {
     margin-left: 0px;
-
 }
 
-.d2 {
+.book-cover {
     margin-right: 0px;
-
 }
 
-.d1 {
+book-cover {
+	margin: auto;
+}
+
+.info {
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-gap: 20px;
-
 }
 
-.star-f, .star-e {
-    height: 1.5em;
+.stars-f, .stars-e {
+	  display: none;
+    height: 1.5rem;
 }
-.star-f{
+.stars-e{
     position: absolute;
 }
 
@@ -47,5 +49,4 @@ main div {
 
 .prc {
     margin: 0px;
-
 }
